@@ -13,20 +13,24 @@ import model.design.Juros;
         public class TesteJuros {
         public static void main(String[] args){
             
-           
+            
             Juros j = new Juros();
-            
-            j.capital = 1000;
-            j.taxa = 10;
-            j.prazo = 12;
                         
-            
-            
+            j.setCapital(1000);
+            j.setTaxa(10);
+            j.setPrazo(12);
+                        
+            //Calculando os justos
+            j.calcularJuros();
+                        
             //Testando a impresão dos dados 
-            System.out.println("Para o capital de R$ "+j.capital);
-            System.out.println("Será aplicado uma taxa de "+j.taxa+ " % " );
-            System.out.println("Por conta do prazo de " +j.prazo+ " meses");
-            System.out.println("Será cobrado o jurus de R$ " +j.jurus);
- 
+            System.out.println("Para o capital de R$ "+j.getCapital());
+            System.out.println("Será aplicado uma taxa de "+j.getTaxa()+ " % " );
+            System.out.println("Por conta do prazo de " +j.getPrazo()+ " meses");
+            System.out.println("Será cobrado o jurus de R$ " +j.getJuros());
+            
+            
+            
+            
 }
 }

@@ -11,11 +11,72 @@ package model.design;
  */
 
 public class Juros {
-double capital,taxa,prazo,juros;
+    private double capital;
+    private double taxa;
+    private double prazo;
+    public double juros;
+                   
+    public void calcularJuros(){
+       
+            setJuros(100 / (getCapital() * getTaxa() * getPrazo()));
+                    
+                               } 
+    /**
+     * @return the capital
+     */
+    public double getCapital() {
+        return capital;
+    }
+
+    /**
+     * @param capital the capital to set
+     */
+    public void setCapital(double capital) {
+        this.capital = capital;
+    }
+
+    /**
+     * @return the taxa
+     */
+    public double getTaxa() {
+        return taxa;
+    }
+
+    /**
+     * @param taxa the taxa to set
+     */
+    public void setTaxa(double taxa) {
+        this.taxa = taxa;
+    }
+
+    /**
+     * @return the prazo
+     */
+    public double getPrazo() {
+        return prazo;
+    }
+
+    /**
+     * @param prazo the prazo to set
+     */
+    public void setPrazo(double prazo) {
+        this.prazo = prazo;
+    }
+
+    /**
+     * @return the juros
+     */
+    public double getJuros() {
+        return juros;
+    }
+
+    /**
+     * @param juros the juros to set
+     */
+    public void setJuros(double juros) {
+        this.juros = juros;
+    }
+
+ }
 
 
-
-public void calcularJurus(){
-            juros = 100/(capital*taxa*prazo);
-                           } 
-                    }     
