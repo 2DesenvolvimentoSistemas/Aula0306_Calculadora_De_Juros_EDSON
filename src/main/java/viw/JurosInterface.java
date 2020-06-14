@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package viw;
-
 import model.design.Juros;
 
 /**
@@ -171,18 +170,18 @@ public class JurosInterface extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         // Declaração de cariaveis
-        double juros;
+        double edson=0, capital, prazo, taxa;
                 
         // Criacao do objeto
         Juros j = new Juros();
                
         //Entradas
-        j.setCapital(Double.parseDouble(txtCapital.getText()));
-        j.setPrazo(Double.parseDouble(txtPrazo.getText()));
-        j.setTaxa(Double.parseDouble(txtTaxa.getText()));
+        capital = Double.parseDouble(txtCapital.getText());
+        prazo = Double.parseDouble(txtPrazo.getText());
+        taxa = Double.parseDouble(txtTaxa.getText());
         
         //Saidas
-        lblResultado.setText(j.setJuros(juros));
+        lblResultado.setText(j.calcularJuros(edson)+ " % ");
                 
     }//GEN-LAST:event_btnCalcularActionPerformed
 
