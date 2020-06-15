@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package viw;
+import javax.swing.JOptionPane;
 import model.design.Juros;
 
 /**
@@ -172,6 +173,12 @@ public class JurosInterface extends javax.swing.JFrame {
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
         // TODO add your handling code here:
+        txtCapital.setText(null);
+        txtTaxa.setText(null);
+        txtPrazo.setText(null);
+        
+        txtCapital.requestFocus();
+        
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
@@ -180,15 +187,21 @@ public class JurosInterface extends javax.swing.JFrame {
         // Criacao do objeto
         Juros j = new Juros();
         
-        // Declaração de cariaveis e entradas
-        double capital = Double.parseDouble(txtCapital.getText());
-        double prazo = Double.parseDouble(txtPrazo.getText());
-        double taxa = Double.parseDouble(txtTaxa.getText());
+        //Tratamento de dados invalidos com TRY e CATCH
+    try{
+            // Declaração de variaveis e entradas
+            double capital = Double.parseDouble(txtCapital.getText());
+            double prazo = Double.parseDouble(txtPrazo.getText());
+            double taxa = Double.parseDouble(txtTaxa.getText());
         
-        //Saidas
-        lblResultado.setText(String.valueOf("SERÁ COBRADO R$ "+j.calcularJuros(taxa, capital, taxa, prazo)+" DE JUROS"));        
+            //Saidas
+            lblResultado.setText(String.valueOf("SERÁ COBRADO R$ "+j.calcularJuros(taxa, capital, taxa, prazo)+" DE JUROS"));        
     }//GEN-LAST:event_btnCalcularActionPerformed
-
+    catch(NumberFormatException e){
+    JOptionPane.showMessageDialog(null,"Erro: presta atenção, informe todos os campos! ", "ops!", JOptionPane.ERROR_MESSAGE);
+    }            
+    }
+                
     private void txtCapitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCapitalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCapitalActionPerformed
