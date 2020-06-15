@@ -28,6 +28,7 @@ public class JurosInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         pnlConversor = new javax.swing.JPanel();
         lblCapital = new javax.swing.JLabel();
         txtCapital = new javax.swing.JTextField();
@@ -35,16 +36,17 @@ public class JurosInterface extends javax.swing.JFrame {
         btnCalcular = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
         lblTaxa = new javax.swing.JLabel();
-        lblJuros = new javax.swing.JLabel();
         txtPrazo = new javax.swing.JTextField();
         txtTaxa = new javax.swing.JTextField();
         lblResultado = new javax.swing.JLabel();
+
+        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CALCULE JUROS");
         setAlwaysOnTop(true);
 
-        lblCapital.setText("Informe o capital");
+        lblCapital.setText("INFORME O CAPITAL  R$");
 
         txtCapital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +54,7 @@ public class JurosInterface extends javax.swing.JFrame {
             }
         });
 
-        pnlPrazo.setText("Informe o prazo");
+        pnlPrazo.setText("INFORME O PRAZO EM MESES");
 
         btnCalcular.setText("CALCULAR JUROS");
         btnCalcular.addActionListener(new java.awt.event.ActionListener() {
@@ -68,9 +70,7 @@ public class JurosInterface extends javax.swing.JFrame {
             }
         });
 
-        lblTaxa.setText("Informe a taxa");
-
-        lblJuros.setText("Juros a ser cobrado");
+        lblTaxa.setText("INFORME A TAXA  EM  %");
 
         txtPrazo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,45 +89,53 @@ public class JurosInterface extends javax.swing.JFrame {
         pnlConversorLayout.setHorizontalGroup(
             pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConversorLayout.createSequentialGroup()
-                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pnlConversorLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConversorLayout.createSequentialGroup()
                         .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pnlPrazo)
-                            .addComponent(lblCapital)
-                            .addComponent(lblTaxa)
-                            .addComponent(lblJuros)))
-                    .addGroup(pnlConversorLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12)
-                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
-                    .addComponent(txtCapital)
-                    .addComponent(txtPrazo)
-                    .addComponent(txtTaxa)
-                    .addComponent(lblResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(pnlConversorLayout.createSequentialGroup()
+                                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlConversorLayout.createSequentialGroup()
+                                        .addGap(32, 32, 32)
+                                        .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnlConversorLayout.createSequentialGroup()
+                                        .addGap(43, 43, 43)
+                                        .addComponent(lblTaxa, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnlConversorLayout.createSequentialGroup()
+                                        .addGap(43, 43, 43)
+                                        .addComponent(lblCapital, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(30, 30, 30))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConversorLayout.createSequentialGroup()
+                                .addComponent(pnlPrazo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtCapital)
+                            .addComponent(txtTaxa)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConversorLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(txtPrazo, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         pnlConversorLayout.setVerticalGroup(
             pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlConversorLayout.createSequentialGroup()
-                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCapital)
-                    .addComponent(txtCapital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlPrazo)
-                    .addComponent(txtPrazo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtCapital)
+                    .addComponent(lblCapital, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPrazo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlPrazo))
                 .addGap(24, 24, 24)
-                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTaxa)
-                    .addComponent(txtTaxa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtTaxa)
+                    .addComponent(lblTaxa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblJuros)
-                    .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnLimpar, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                     .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -169,20 +177,16 @@ public class JurosInterface extends javax.swing.JFrame {
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
         
-        // Declaração de cariaveis
-        double edson=0, capital, prazo, taxa;
-                
         // Criacao do objeto
         Juros j = new Juros();
-               
-        //Entradas
-        capital = Double.parseDouble(txtCapital.getText());
-        prazo = Double.parseDouble(txtPrazo.getText());
-        taxa = Double.parseDouble(txtTaxa.getText());
+        
+        // Declaração de cariaveis e entradas
+        double capital = Double.parseDouble(txtCapital.getText());
+        double prazo = Double.parseDouble(txtPrazo.getText());
+        double taxa = Double.parseDouble(txtTaxa.getText());
         
         //Saidas
-        lblResultado.setText(j.calcularJuros(edson)+ " % ");
-                
+        lblResultado.setText(String.valueOf("SERÁ COBRADO R$ "+j.calcularJuros(taxa, capital, taxa, prazo)+" DE JUROS"));        
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void txtCapitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCapitalActionPerformed
@@ -228,8 +232,8 @@ public class JurosInterface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnLimpar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblCapital;
-    private javax.swing.JLabel lblJuros;
     private javax.swing.JLabel lblResultado;
     private javax.swing.JLabel lblTaxa;
     private javax.swing.JPanel pnlConversor;

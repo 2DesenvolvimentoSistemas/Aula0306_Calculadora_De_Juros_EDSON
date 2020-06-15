@@ -5,15 +5,15 @@
  */
 package model.design;
 
+
 /**
  *
  * @author edson_home
  */
 
 public class Juros {
-                   double capital, taxa, prazo;
-    public double calcularJuros(double edson){
-       
-            return edson = 100/capital + taxa + prazo; 
-                                             }
-                   }
+    public double calcularJuros(double juros, double capital, double taxa, double prazo){
+                   return juros = (capital * taxa * prazo)/100;                                             
+    }
+                   
+}
